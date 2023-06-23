@@ -11,6 +11,7 @@ void print_square(int size)
 {
 	int i, j;
 	int n = size;
+	
 
 	if (n > 0)
 	{
