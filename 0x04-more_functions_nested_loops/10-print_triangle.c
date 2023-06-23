@@ -1,27 +1,31 @@
 #include "main.h"
 /**
- * print_square - A function who print a square
+ * print_triangle - A function who print a triangle
  *
- * @size: size of square
+ * @size: size of a triangle
  *
  * Return: Does not return anything
  */
-void print_square(int size)
+void print_triangle(int size)
 {
-	int i, j;
-	int n = size;
+	int par1, par2, space, output;
 
-	if (n > 0)
+	for (par1 = 1; par1 <= size; par1++)
 	{
-		for (j = 0; j < n; j++)
+		space = size - par1;
+		output = size - space;
+
+		for (par2 = 1; par2 <= space; par2++)
 		{
-			for (i = 0; i < n; i++)
-			{
-				_putchar(35);
-			}
-			_putchar('\n');
+			_putchar(' ');
 		}
+		for (par2 = 1; par2 <= output; par2++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+
 	}
-	else
+	if (size <= 0)
 		_putchar('\n');
 }
